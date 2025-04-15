@@ -108,7 +108,7 @@ export function HeroSection() {
         >
           <p className="text-2xl font-medium">Software Engineer & Freelancer</p>
           <p className="text-xl text-gray-600">
-            pursuing Master's in Data Science
+            pursuing Master&apos;s in Data Science
           </p>
         </div>
       </div>
