@@ -2,6 +2,8 @@
 
 This is a new implementation of my old portfolio using T3 stack and tRPC.
 
+> **Note:** Ignore the server folder for the moment. We will use it later.
+
 ## Todo List
 
 - [ ] Dashboard implementation
@@ -11,7 +13,7 @@ This is a new implementation of my old portfolio using T3 stack and tRPC.
 - [ ] Blog functionality
 - [ ] Dark/Light theme toggle
 - [ ] Contact form with email notifications
-- [ ] Skills visualization
+- [X] Skills visualization
 - [ ] Resume/CV download option
 - [ ] Social media integration
 - [ ] Performance optimizations
@@ -48,4 +50,4 @@ You can check out the [create-t3-app GitHub repository](https://github.com/t3-os
 
 ## How do I deploy this?
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+Follow The T3stack deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
