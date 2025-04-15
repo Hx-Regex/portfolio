@@ -1,53 +1,45 @@
-import Link from "next/link";
+import { Suspense } from "react";
 
-import { LatestPost } from "@/app/_components/post";
-import { api, HydrateClient } from "@/trpc/server";
+import { BottomNav } from "@/components/bottom-nav";
+import { HeroSection } from "@/components/hero-section";
+// import { TechMarquee } from "@/components/tech-marquee";
+import { NavBar } from "@/components/nav-bar";
+import { CursorFollower } from "@/components/cursorFollower/cursor-follower";
+import { AboutSection } from "@/components/about-section";
+import { ProjectsSection } from "@/components/projects-section";
+import { Marquee } from "@/components/marquee";
+import { MarqueeDemo } from "@/components/tech-marquee";
 
-export default async function Home() {
-  const hello = await api.post.hello({ text: "from tRPC" });
+async function delay(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
-  void api.post.getLatest.prefetch();
-
+async function HomeContent() {
   return (
-    <HydrateClient>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-          <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
-            Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-          </h1>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-            <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-white/20"
-              href="https://create.t3.gg/en/usage/first-steps"
-              target="_blank"
-            >
-              <h3 className="text-2xl font-bold">First Steps →</h3>
-              <div className="text-lg">
-                Just the basics - Everything you need to know to set up your
-                database and authentication.
-              </div>
-            </Link>
-            <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-white/20"
-              href="https://create.t3.gg/en/introduction"
-              target="_blank"
-            >
-              <h3 className="text-2xl font-bold">Documentation →</h3>
-              <div className="text-lg">
-                Learn more about Create T3 App, the libraries it uses, and how
-                to deploy it.
-              </div>
-            </Link>
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <p className="text-2xl text-white">
-              {hello ? hello.greeting : "Loading tRPC query..."}
-            </p>
-          </div>
+    <>
+      <CursorFollower />
+      <NavBar />
+      <div className="h-[100svh] flex flex-col">
 
-          <LatestPost />
-        </div>
-      </main>
-    </HydrateClient>
+     
+      <div className="w-full absolute top-0 left-0">
+        <HeroSection />
+      </div>
+      <div className="h-[83vh] w-full " />
+      <p className="text-center text-lg text-gray-600 mb-6">Worked with</p>
+      {/* <TechMarquee /> */}
+      <MarqueeDemo />
+      </div>
+      {/* <AboutSection />
+      <ProjectsSection /> */}
+    </>
+  );
+}
+
+export default function Home() {
+  return (
+    <main className="relative min-h-screen">
+      <HomeContent />
+    </main>
   );
 }
