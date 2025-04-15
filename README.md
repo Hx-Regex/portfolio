@@ -1,19 +1,41 @@
-# Create T3 App
+# HX Portfolio v2
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This is a new implementation of my old portfolio using T3 stack and tRPC.
 
-## What's next? How do I make an app with this?
+## Todo List
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- [ ] Dashboard implementation
+- [ ] Supabase connection setup
+- [ ] Authentication system
+- [ ] Project showcase section
+- [ ] Blog functionality
+- [ ] Dark/Light theme toggle
+- [ ] Contact form with email notifications
+- [ ] Skills visualization
+- [ ] Resume/CV download option
+- [ ] Social media integration
+- [ ] Performance optimizations
+- [ ] SEO improvements
+- [ ] Responsive design for all devices
+- [ ] Animations and transitions
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Tech Stack
 
 - [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
 - [tRPC](https://trpc.io)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Supabase](https://supabase.com)
+- [TypeScript](https://www.typescriptlang.org/)
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
 
 ## Learn More
 
