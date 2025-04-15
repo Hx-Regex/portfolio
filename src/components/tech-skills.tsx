@@ -22,7 +22,7 @@ export default function TechnologiesSection() {
       <div className="container px-4 mx-auto">
         <h2 className="text-3xl font-bold mb-2">Current technologies</h2>
         <p className="text-gray-600 mb-10">
-          I'm proficient in a range of modern technologies that empower me to build highly functional solutions. These are some of my <b>Main</b> technologies.
+          I&apos;m proficient in a range of modern technologies that empower me to build highly functional solutions. These are some of my <b>Main</b> technologies.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
