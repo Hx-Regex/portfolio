@@ -9,7 +9,7 @@ import { AboutSection } from "@/components/about-section";
 import { ProjectsSection } from "@/components/projects-section";
 import { Marquee } from "@/components/marquee";
 import { MarqueeDemo } from "@/components/tech-marquee";
-
+import TechnologiesSection from "@/components/tech-skills";
 async function delay(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -30,6 +30,7 @@ async function HomeContent() {
       {/* <TechMarquee /> */}
       <MarqueeDemo />
       </div>
+      <TechnologiesSection />
       {/* <AboutSection />
       <ProjectsSection /> */}
     </>
