@@ -1,16 +1,14 @@
 "use client"
 
 import Link from "next/link"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
-import ScrollTrigger from "gsap/dist/ScrollTrigger"
 import { Button } from "@/components/ui/button"
-
-gsap.registerPlugin(ScrollTrigger)
+import { cn } from "@/lib/utils"
 
 export function NavBar() {
   const linkRefs = useRef<(HTMLAnchorElement | null)[]>([])
-  const navRef = useRef<HTMLElement>(null)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     // Links animation
@@ -53,20 +51,34 @@ export function NavBar() {
       })
     })
 
-    // Scroll animation for navbar background
-    ScrollTrigger.create({
-      start: "top -100",
-      end: 99999,
-      toggleClass: {
-        targets: navRef.current,
-        className: "nav-blur"
+    // Add scroll event listener
+    const handleScroll = () => {
+      const scrollTop = window.scrollY
+      if (scrollTop > 10) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
       }
-    });
+    }
+
+    // Add event listener
+    window.addEventListener('scroll', handleScroll)
+    
+    // Call once to set initial state
+    handleScroll()
+
+    // Clean up
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
 
   return (
-    <nav ref={navRef} className="fixed top-0 left-0 w-full z-50 transition-all duration-300">
-      <div className="relative w-full px-8 py-4 flex justify-between items-center">
+    <nav className="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+      <div className={cn(
+        "relative w-full px-8 py-4 flex justify-between items-center transition-all duration-300",
+        scrolled ? "bg-background backdrop-blur-md   border-b border-black" : "bg-transparent"
+      )}>
         <Link href="/" className="text-2xl font-bold text-black" data-cursor="nav">
           Hx.
         </Link>
@@ -89,7 +101,7 @@ export function NavBar() {
           </div>
         </div>
 
-        <Button variant="outline" className="rounded-full px-6 text-black border-black bg-white">
+        <Button variant="outline" className="rounded-full px-6 text-black border-black bg-white border-2 border-b-4 border-r-4 " >
           Let's Talk
         </Button>
       </div>
