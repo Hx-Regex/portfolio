@@ -65,7 +65,7 @@ export function HeroSection() {
           target="_blank"
           ref={badgeRef}
           data-cursor="linkedin"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full 
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-b-4 border-r-4  
                    bg-blue-50 border border-blue-200 hover:bg-blue-100 
                    transition-colors duration-300 opacity-0  mb-5"
         >

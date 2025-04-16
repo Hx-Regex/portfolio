@@ -73,7 +73,7 @@ export default function TechnologiesSection() {
 
 function TechCard({ icon, name, description }: { icon: React.ReactNode, name: string, description: string }) {
   return (
-    <Card className="border border-gray-300 shadow-sm hover:shadow-md transition-shadow rounded-md ">
+    <Card className="border-2 border-black border-b-4 border-r-4 shadow-sm hover:shadow-md transition-shadow rounded-md ">
       <CardContent className="p-4 flex items-center gap-4 py-0">
         <div className="w-8 h-8 flex items-center justify-center">
           {icon}

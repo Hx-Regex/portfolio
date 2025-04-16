@@ -12,6 +12,11 @@ const CompanyLogos = [
     src: "/assets/companies/kora.png",
     alt: "Kora",
     width: 200
+  },
+  {
+    src: "/assets/companies/sofimed.png",
+    alt: "Sofiemd",
+    width: 200
   }
 ];
 
