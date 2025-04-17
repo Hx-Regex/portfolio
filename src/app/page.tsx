@@ -6,7 +6,6 @@ import { HeroSection } from "@/components/hero-section";
 import { NavBar } from "@/components/nav-bar";
 import { CursorFollower } from "@/components/cursorFollower/cursor-follower";
 import { AboutSection } from "@/components/about-section";
-import { ProjectsSection } from "@/components/projects-section";
 import { Marquee } from "@/components/marquee";
 import { MarqueeDemo } from "@/components/tech-marquee";
 import TechnologiesSection from "@/components/tech-skills";
