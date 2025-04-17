@@ -5,30 +5,124 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import gsap from "gsap"
+import { SiNextdotjs, SiTailwindcss, SiExpress, SiDocker, SiFirebase, SiReact, SiGoogleanalytics, SiC, SiPwa } from "react-icons/si"
+import { TbBrandReactNative } from "react-icons/tb"
+import { HiOutlineDatabase } from "react-icons/hi"
+import { SiUmami } from "react-icons/si"
+import type { IconType } from "react-icons"
+
+// Technology badge configuration with icons and colors
+interface TechConfig {
+  icon: IconType;
+  color: string;
+  borderColor: string;
+  textColor: string;
+}
+
+const techConfig: Record<string, TechConfig> = {
+  "Next.js": { 
+    icon: SiNextdotjs, 
+    color: "text-black", 
+    borderColor: "border-black border-b-2 border-r-2",
+    textColor: "text-gray-800"
+  },
+  "Tailwind CSS": { 
+    icon: SiTailwindcss, 
+    color: "text-[#38bdf8]", 
+    borderColor: "border-black border-b-2 border-r-2",
+    textColor: "text-[#38bdf8]"
+  },
+  "Express.js": { 
+    icon: SiExpress, 
+    color: "text-[#000000]", 
+    borderColor: "border-black border-b-2 border-r-2",
+    textColor: "text-[#000000]"
+  },
+  "Docker": { 
+    icon: SiDocker, 
+    color: "text-[#2496ED]", 
+    borderColor: "border-black border-b-2 border-r-2",
+    textColor: "text-[#2496ED]"
+  },
+  "Firebase": { 
+    icon: SiFirebase, 
+    color: "text-[#FFCA28]", 
+    borderColor: "border-black border-b-2 border-r-2",
+    textColor: "text-[#FFCA28]"
+  },
+  "React": { 
+    icon: SiReact, 
+    color: "text-[#61DAFB]", 
+    borderColor: "border-black border-b-2 border-r-2",
+    textColor: "text-[#61DAFB]"
+  },
+  "Umami": { 
+    icon: SiUmami, 
+    color: "text-[#6c5ce7]", 
+    borderColor: "border-black border-b-2 border-r-2",
+    textColor: "text-[#6c5ce7]"
+  },
+  "Google Analytics": { 
+    icon: SiGoogleanalytics, 
+    color: "text-[#E37400]", 
+    borderColor: "border-black border-b-2 border-r-2",
+    textColor: "text-[#E37400]"
+  },
+  "PWA": { 
+    icon: SiPwa, 
+    color: "text-[#5a0fc8]", 
+    borderColor: "border-black border-b-2 border-r-2",
+    textColor: "text-[#5a0fc8]"
+  },
+  "C": { 
+    icon: SiC, 
+    color: "text-[#5c6bc0]", 
+    borderColor: "border-black border-b-2 border-r-2",
+    textColor: "text-[#5c6bc0]"
+  },
+  "React Native": { 
+    icon: TbBrandReactNative, 
+    color: "text-[#61DAFB]", 
+    borderColor: "border-black border-b-2 border-r-2",
+    textColor: "text-[#61DAFB]"
+  },
+  "Firebase Real TimeDB": { 
+    icon: HiOutlineDatabase, 
+    color: "text-[#FF8F00]", 
+    borderColor: "border-black border-b-2 border-r-2",
+    textColor: "text-[#FF8F00]"
+  },
+  "Firebase Firestore": { 
+    icon: HiOutlineDatabase, 
+    color: "text-[#FF8F00]", 
+    borderColor: "border-black border-b-2 border-r-2",
+    textColor: "text-[#FF8F00]"
+  },
+}
 
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with payment integration and admin dashboard.",
-    tags: ["Next.js", "Tailwind CSS", "Supabase", "Stripe"],
-    image: "/placeholder.svg?height=600&width=800",
-    link: "#",
+    title: "Kora Awards Voting Platform",
+    description: "Online paid voting platform with multiple payment gateways integration (Onafriq, Ngenius, Pvit) and analytics dashboard to monitor transactions, revenue, and server performance.",
+    tags: ["Next.js", "Tailwind CSS", "Express.js", "Docker", "Firebase", "React", "Umami"],
+    image: "/assets/projects/kora.png",
+    link: "https://e-vote.koraawards.com",
   },
   {
     id: 2,
-    title: "AI Content Generator",
-    description: "An AI-powered application that generates marketing content based on user prompts.",
-    tags: ["React", "Node.js", "OpenAI", "MongoDB"],
-    image: "/placeholder.svg?height=600&width=800",
-    link: "#",
+    title: "Africkana Radio Website",
+    description: "Created a dynamic dashboard for managing radios, playlists, podcasts, and advertisements (MP3 and banners). Implemented responsive design and ad management system.",
+    tags: ["Next.js", "Tailwind CSS", "React", "Google Analytics", "PWA"],
+    image: "/assets/projects/africkana.png",
+    link: "https://radio.africkana.com",
   },
   {
     id: 3,
-    title: "Portfolio Dashboard",
-    description: "Interactive dashboard for tracking investment portfolio performance with real-time data.",
-    tags: ["TypeScript", "D3.js", "Express", "PostgreSQL"],
-    image: "/placeholder.svg?height=600&width=800",
+    title: "Smart Cafeteria IoT System",
+    description: "Academic project featuring an IoT-based cafeteria management system with mobile app integration and real-time database functionality.",
+    tags: ["C", "React Native", "Firebase Real TimeDB", "Firebase Firestore"],
+    image: "/assets/projects/02hero.jpg",
     link: "#",
   },
 ]
@@ -75,6 +169,7 @@ export default function ProjectSectionClean() {
         <div className="space-y-16">
           {projects.map((project, index) => (
             <div
+              // data-cursor="project"
               key={project.id}
               ref={el => {
                 projectRefs.current[index] = el;
@@ -86,10 +181,14 @@ export default function ProjectSectionClean() {
                 <div className="bg-white p-3 rounded-lg shadow-md border border-black border-black h-full border-b-4 border-r-4">
                   <div className="relative aspect-video rounded-lg overflow-hidden">
                     <Image
+                      data-cursor="project"
                       src={project.image || "assets/projects/radiologo.png"}
                       alt={project.title}
                       fill
-                      className="object-cover transition-transform duration-500 hover:scale-105"
+                      className="object-cover cursor-pointer transition-transform duration-500 hover:scale-105"
+                      onClick={() => {
+                        window.open(project.link, "_blank");
+                      }}
                     />
                   </div>
                 </div>
@@ -101,11 +200,25 @@ export default function ProjectSectionClean() {
                   <h3 className="text-2xl font-bold mb-3 text-gray-900">{project.title}</h3>
                   <p className="text-gray-600 mb-6">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="text-sm font-medium px-3 py-1 rounded-full bg-gray-100 text-gray-700">
-                        {tag}
-                      </span>
-                    ))}
+                    {project.tags.map((tag) => {
+                      const tech = techConfig[tag] || { 
+                        icon: null, 
+                        color: "text-gray-700", 
+                        borderColor: "border-gray-300",
+                        textColor: "text-gray-800" 
+                      };
+                      const IconComponent = tech.icon;
+                      
+                      return (
+                        <span 
+                          key={tag} 
+                          className={`text-sm font-medium px-3 py-1 rounded-md bg-white border ${tech.borderColor} ${tech.textColor} flex items-center gap-1 shadow-sm`}
+                        >
+                          {IconComponent && <IconComponent className={`h-4 w-4 ${tech.color}`} />}
+                          {tag}
+                        </span>
+                      );
+                    })}
                   </div>
                   <Link
                     href={project.link}
