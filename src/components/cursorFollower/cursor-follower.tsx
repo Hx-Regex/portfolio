@@ -106,7 +106,7 @@ export function CursorFollower() {
       case "project":
         return {
           className:
-            "h-32 w-32 rounded-full bg-black/20 backdrop-blur-md flex items-center justify-center",
+            "h-32 w-32 rounded-full bg-black/20 border backdrop-blur-md flex items-center justify-center",
           size: 128,
         };
       default:
