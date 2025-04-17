@@ -8,7 +8,7 @@ import { TRPCReactProvider } from "@/trpc/react";
 export const metadata: Metadata = {
   title: "Ismail Chabane | Software Developer & Data Science",
   description: "Portfolio of Ismail Chabane, a software developer specializing in full-stack web development and pursuing a Master's in Data Science.",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  icons: [{ rel: "icon", url: "/assets/pfp/favicon.ico" }],
 };
 
 const geist = Geist({
