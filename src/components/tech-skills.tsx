@@ -1,9 +1,9 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { 
-  SiSupabase, 
-  SiPostgresql, 
+import {
+  SiSupabase,
+  SiPostgresql,
   SiMongodb,
   SiAppwrite,
   SiNodedotjs,
@@ -13,18 +13,22 @@ import {
   SiTypescript,
   SiTailwindcss,
   SiFigma,
-  SiGit 
+  SiGit
 } from "react-icons/si"
 
 export default function TechnologiesSection() {
   return (
     <section className="py-16 ">
       <div className="container px-4 mx-auto">
-        <h2 className="text-3xl font-bold mb-2">Current technologies</h2>
-        <p className="text-gray-600 mb-10">
-          I&apos;m proficient in a range of modern technologies that empower me to build highly functional solutions. These are some of my <b>Main</b> technologies.
-        </p>
 
+        <div className=" mx-auto py-20 ">
+          <h2 className="text-lg md:text-4xl mb-4 text-black  dark:text-white max-w-4xl font-bold">
+            Current Technologies
+          </h2>
+          <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-3xl italic">
+          I&apos;m proficient in a range of modern technologies that empower me to build highly functional solutions. These are some of my <b>Main</b> technologies.
+          </p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* DATABASE */}
           <div>
@@ -50,7 +54,7 @@ export default function TechnologiesSection() {
           <div>
             <h3 className="text-lg font-bold mb-4 uppercase tracking-wide">Code</h3>
             <div className="space-y-4">
-              <TechCard icon={<SiReact  className="text-cyan-500 text-4xl" />} name="React" description="JavaScript Library" />
+              <TechCard icon={<SiReact className="text-cyan-500 text-4xl" />} name="React" description="JavaScript Library" />
               <TechCard icon={<SiNextdotjs className="text-gray-900 text-4xl" />} name="NextJS" description="React framework" />
               <TechCard icon={<SiTypescript className="text-blue-600 text-4xl" />} name="TypeScript" description="JavaScript but better" />
               <TechCard icon={<SiTailwindcss className="text-cyan-500 text-4xl" />} name="Tailwind" description="CSS Framework" />
