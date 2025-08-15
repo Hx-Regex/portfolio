@@ -122,7 +122,13 @@ export const EXPERIENCE_TIMELINE = [
           <br /> Step by step, I proved myself and earned the trust to become a
           key member of the team, contributing to feature development and
           product stability. */}
-          
+          My last year of Master's degree and started my internship of 6 months at Sofimed Maroc one of the biggest Industrial Furniture Company in Morocco. <br />{" "}
+          I was responsible for building a new AI based Support System for the company using Langgraph,Next.js,Supabase and OpenAI. <br />{" "}
+          I created a  fully functional Ai Agent that can answer questions about the company's products and services. <br />{" "}
+          The Agent can also give product recommendation based on the user's needs and use cases with accuracy of 70%. <br />{" "}
+          After defending my thesis, I started working on a new project for the company, a Internal Ticketing System <br />{" "}
+          during my free time , I started working on a POS System trying to expirement with Offline First Technologies with Data Syncing. <br />{" "}
+            
         </p>
 
         <div className="grid grid-cols-1 gap-4">
