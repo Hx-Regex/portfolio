@@ -17,29 +17,29 @@ export const EXPERIENCE_TIMELINE = [
         </p>
         <div className="grid grid-cols-2 gap-4">
           <BlurImage
-            src="/images/ilotusland/ilotusland_1.tiff"
-            alt="startup template"
+            src="/assets/projects/smartcafeteria/smart_cafeteria_project.jpg"
+            alt="smart cafeteria project"
             width={500}
-            height={500}
+            height={1000}
             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
           />
           <BlurImage
-            src="/images/ilotusland/ilotusland_2.tiff"
-            alt="startup template"
+            src="/assets/projects/smartcafeteria/smart_cafeteria_day.jpg"
+            alt="smart cafeteria day"
             width={500}
-            height={500}
+            height={1000}
             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
           />
           <BlurImage
-            src="/images/ilotusland/ilotusland_3.tiff"
-            alt="startup template"
+            src="/assets/projects/pdforca/pdf_orca.jpg"
+            alt="pdf orca"
             width={500}
-            height={500}
+            height={1000}
             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
           />
           <BlurImage
-            src="/images/ilotusland/ilotusland_4.webp"
-            alt="startup template"
+            src="/assets/pro  jects/africkanaradio/africkana_radio_v1.jpg"
+            alt="africkana radio website"
             width={500}
             height={500}
             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
@@ -57,35 +57,21 @@ export const EXPERIENCE_TIMELINE = [
           I also joined Soft Skills Club as the person in charge of digitalisation , I was responsible for creating and maintaning the club's website. <br />{" "}
           where i created a Main Website and the Admin Dashbaord using Next.js and Tailwind CSS and shadcn/ui and Firebase as the database and hosted it using Vercel. <br />{" "}
         </p>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4">
           <BlurImage
-            src="/images/ilotusland/ilotusland_section2_1.JPG"
-            alt="startup template"
+            src="/assets/projects/soft_skills/soft_skills_site.png"
+            alt="soft skills website"
             width={500}
             height={500}
             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
           />
-          <BlurImage
+          {/* <BlurImage
             src="/images/ilotusland/ilotusland_section2_2.JPG"
             alt="startup template"
             width={500}
             height={500}
             className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <BlurImage
-            src="/images/ilotusland/ilotusland_section2_3.PNG"
-            alt="startup template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
-          <BlurImage
-            src="/images/ilotusland/ilotusland_section2_4.JPG"
-            alt="startup template"
-            width={500}
-            height={500}
-            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-          />
+          /> */}
         </div>
       </div>
     ),
@@ -100,10 +86,31 @@ export const EXPERIENCE_TIMELINE = [
           also proposed a new design for the Africkana Radio Website using Figma and implemented it using my new set of technologies. <br />{" "}
         </p>
 
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-2 gap-4">
           <BlurImage
-            src="/images/ilotusland/ilotusland_section_3.webp"
-            alt="hero template"
+            src="/assets/projects/kora/kora.jpg"
+            alt="kora awards"
+            width={500}
+            height={500}
+            className="rounded-lg object-cover w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          />
+          <BlurImage
+            src="/assets/projects/kora/kora_website.png"
+            alt="kora awards website"
+            width={500}
+            height={500}
+            className="rounded-lg object-cover w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          />
+            <BlurImage
+            src="/assets/projects/africkanaradio/africkana_radio_v2.png"
+            alt="africkana radio website"
+            width={500}
+            height={500}
+            className="rounded-lg object-cover w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          />
+          <BlurImage
+            src="/assets/projects/africkanaradio/africkana_radio_v2_dash.png"
+            alt="africkana radio dashboard"
             width={500}
             height={500}
             className="rounded-lg object-cover w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"

@@ -49,6 +49,7 @@ export const BlurImage = ({
       decoding="async"
       blurDataURL={typeof src === "string" ? src : undefined}
       alt={alt ? alt : "Background of a beautiful view"}
+      style={{ height: '500px' }}
       {...rest}
     />
   )
