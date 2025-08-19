@@ -33,7 +33,7 @@ async function HomeContent() {
       </div>
       <TechnologiesSection />
       <EducationExperienceSection />
-      <ProjectSectionClean />
+      {/* <ProjectSectionClean /> */}
       {/* <AboutSection />
       <ProjectsSection /> */}
     </>
