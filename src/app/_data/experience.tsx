@@ -1,5 +1,69 @@
 import { BlurImage } from "@/components/ui/blur-image";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import { Progress } from "@/components/ui/progress"
+// Video component with intersection observer and progress indicator
+const VideoWithProgress = ({ src, className }: { src: string; className?: string }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry && entry.isIntersecting) {
+          setIsVisible(true);
+          video.play().catch(() => {
+            // Handle autoplay restrictions
+          });
+        } else {
+          setIsVisible(false);
+          video.pause();
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(video);
+
+    // const updateProgress = () => {
+    //   if (video.duration) {
+    //     setProgress((video.currentTime / video.duration) * 100);
+    //   }
+    // };
+
+    // video.addEventListener('timeupdate', updateProgress);
+
+    return () => {
+      observer.disconnect();
+      // video.removeEventListener('timeupdate', updateProgress);
+    };
+  }, []);
+
+  return (
+    <div className="relative">
+      <video
+        ref={videoRef}
+        src={src}
+        muted
+        loop
+        playsInline
+        className={className}
+      />
+      {/* Progress indicator overlay */}
+      {/* <div className="absolute bottom-0 left-0 right-0 h-1 bg-black/20 rounded-bl-lg rounded-br-lg overflow-hidden">
+        <div
+          className="h-full bg-yellow-500/80 transition-all "
+          style={{ width: `${progress}%` }}
+        />
+      </div> */}
+    </div>
+  );
+};
 
 export const EXPERIENCE_TIMELINE = [
   {
@@ -82,12 +146,8 @@ export const EXPERIENCE_TIMELINE = [
           </p>
         </div>
         <div className="grid grid-cols-1 gap-4">
-          <video
+          <VideoWithProgress
             src="/assets/projects/soft_skills/soft-skills-website.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
             className="rounded-lg object-cover w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
           />
           {/* <BlurImage
@@ -192,18 +252,14 @@ export const EXPERIENCE_TIMELINE = [
           </p>
 
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-normal leading-relaxed">
-            After defending my thesis, I started working on an <strong>Internal Ticketing System</strong> for the company.
-            In my free time, I'm experimenting with <strong>Offline-First Technologies</strong> and data sync for a POS system.
+            After defending my thesis, I still had 14 days left in my internship.
+            Using my experience and knowledge, plus leveraging AI tools, I successfully built the <strong>Internal Ticketing System</strong> in those 14 days.
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-4">
-          <video
+          <VideoWithProgress
             src="/assets/projects/sofimedticket/Internal-ticket-system.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
             className="rounded-lg object-cover w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
           />
         </div>

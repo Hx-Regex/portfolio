@@ -74,7 +74,7 @@ export function HeroSection() {
             <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
           </span>
           <span data-cursor="linkedin" className="text-sm font-medium text-blue-800">
-            Open to PFE Internship Opportunities
+            Open to Permanent Position Opportunities
           </span>
           <svg
             data-cursor="linkedin"
@@ -108,7 +108,7 @@ export function HeroSection() {
         >
           <p className="text-2xl font-medium">Software Engineer & Freelancer</p>
           <p className="text-xl text-gray-600">
-            pursuing Master&apos;s in Data Science
+            Master&apos;s in Data Science & Big Data
           </p>
         </div>
       </div>
