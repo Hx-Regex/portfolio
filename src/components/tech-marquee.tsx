@@ -28,7 +28,7 @@ export function MarqueeDemo() {
     <Marquee
       speed={30}
       pauseOnHover
-      className="py-4 w-full"
+      className="py-4 w-full container mx-auto"
     >
       {logos.map((logo, index) => (
         <div

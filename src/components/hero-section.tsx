@@ -58,7 +58,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="flex min-h-[83vh]  flex-col items-center justify-center text-center relative">
+    <section className="flex min-h-[83vh] flex-col items-center justify-center text-center relative bg-grid-pattern">
       <div className="absolute top-[43%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full mt-20">
         <Link
           href="https://www.linkedin.com/in/ismail-chabane-135aba255/"

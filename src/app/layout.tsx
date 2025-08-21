@@ -4,6 +4,10 @@ import { type Metadata } from "next";
 import { Geist } from "next/font/google";
 
 import { TRPCReactProvider } from "@/trpc/react";
+import Footer from "@/components/footer";
+// import { NavBar } from "@/components/nav-bar";
+import { CursorFollower } from "@/components/cursorFollower/cursor-follower";
+import Navbar from "@/components/nav-bar";
 
 export const metadata: Metadata = {
   title: "Ismail Chabane | Software Developer & Data Science",
@@ -22,7 +26,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable}`}>
       <body className="bg-background text-foreground">
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <TRPCReactProvider>
+          <CursorFollower />
+
+            <Navbar />
+          {children}
+          <Footer />
+        </TRPCReactProvider>
       </body>
     </html>
   );

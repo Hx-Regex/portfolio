@@ -1,111 +1,120 @@
 "use client"
 
-import Link from "next/link"
-import { useEffect, useRef, useState } from "react"
-import gsap from "gsap"
+import { useState, useEffect } from "react"
+import { Flame, Github, ChevronDown, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import Image from "next/image"
+// import logoImage from "/public/assets/logo/logo.png"
 
-export function NavBar() {
-  const linkRefs = useRef<(HTMLAnchorElement | null)[]>([])
-  const [scrolled, setScrolled] = useState(false)
+export default function Navbar() {
+    const [isScrolled, setIsScrolled] = useState(false)
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  useEffect(() => {
-    // Links animation
-    linkRefs.current.forEach((link, index) => {
-      if (!link) return
-
-      // Initial fade in animation
-      gsap.fromTo(
-        link,
-        { opacity: 0, y: -20 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.3,
-          delay: 0.1 * index,
-          ease: "power2.out",
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 20)
         }
-      )
 
-      // Create and append underline element
-      const underline = document.createElement("div")
-      underline.className = "absolute bottom-0 left-0 h-0.5 w-0 bg-black"
-      link.appendChild(underline)
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
 
-      // GSAP hover animations
-      link.addEventListener("mouseenter", () => {
-        gsap.to(underline, {
-          width: "100%",
-          duration: 0.3,
-          ease: "power2.out"
-        })
-      })
-
-      link.addEventListener("mouseleave", () => {
-        gsap.to(underline, {
-          width: 0,
-          duration: 0.3,
-          ease: "power2.in"
-        })
-      })
-    })
-
-    // Add scroll event listener
-    const handleScroll = () => {
-      const scrollTop = window.scrollY
-      if (scrollTop > 10) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen)
     }
+    // ${isScrolled ? "bg-red-700/40 border border-b-2 border-r-2 border-black backdrop-blur-sm   shadow-sm max-w-7xl" : "bg-transparent"}
+    return (
+        <nav
+            className={`fixed  left-1/2 -translate-x-1/2 top-4 z-50 container px-12 mx-auto transition-[max-width] duration-500 `}
+        >
+            <div className={`" mx-auto transition-all duration-500 px-6 ${isScrolled ? "bg-white/90 border border-gray-300  *:backdrop-blur-sm   " : "bg-transparent"} rounded-lg `}>
+                <div className="flex items-center justify-between h-16">
+                    {/* Logo */}
+                    <div className="flex items-center space-x-2">
+                        {/* <Image 
+                            src={logoImage}
+                            alt="logo"
+                            width={70}
+                            height={70}
+                        /> */}
+                        <span className="text-2xl font-bold text-black">IC</span>
+                    </div>
 
-    // Add event listener
-    window.addEventListener('scroll', handleScroll)
-    
-    // Call once to set initial state
-    handleScroll()
+                    {/* Desktop Navigation Links */}
+                    <div className="hidden md:flex items-center space-x-8">
+                        <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
+                            Home
+                        </a>
+                        <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">  
+                            Projects
+                        </a>
+                        <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors"> Contact</a>
+                        {/* <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
+                            Events
+                        </a>
+                        <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
+                            Contact us
+                        </a> */}
+                        {/* <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
+                            Blog
+                        </a> */}
+                    </div>
 
-    // Clean up
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+                    {/* Right Side */}
+                    <div className="flex items-center space-x-4">
+                        {/* GitHub Stars */}
+                        {/* <Button  variant="outline" className=" px-6">Verify Vote</Button> */}
 
-  return (
-    <nav className="fixed top-0 left-0 w-full z-50 transition-all duration-300">
-      <div className={cn(
-        "relative w-full px-8 py-4 flex justify-between items-center transition-all duration-300",
-        scrolled ? "bg-background backdrop-blur-md   border-b border-black" : "bg-transparent"
-      )}>
-        <Link href="/" className="text-2xl font-bold text-black" data-cursor="nav">
-          Hx.
-        </Link>
+                        {/* Sign Up Button - Hidden on mobile */}
+                        <Button className="hidden md:block bg-primary text-white px-6 cursor-pointer">Let's Talk</Button>
 
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <div className="flex items-center gap-8">
-            {["Index", "Projects", "Agency", "Resources"].map((item, index) => (
-              <Link
-                key={item}
-                href={`/${item.toLowerCase()}`}
-                ref={(el) => {
-                  linkRefs.current[index] = el
-                }}
-                className="relative inline-flex items-center py-2 text-sm font-medium text-black"
-                data-cursor="nav"
-              >
-                {item}
-              </Link>
-            ))}
-          </div>
-        </div>
+                        {/* Mobile Menu Button */}
+                        <button
+                            onClick={toggleMobileMenu}
+                            className="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
+                            aria-label="Toggle mobile menu"
+                        >
+                            {isMobileMenuOpen ? (
+                                <X className="h-6 w-6" />
+                            ) : (
+                                <Menu className="h-6 w-6" />
+                            )}
+                        </button>
+                    </div>
+                </div>
 
-        <Button variant="outline" className="rounded-full px-6 text-black border-black bg-white border-2 border-b-4 border-r-4 " >
-          Let's Talk
-        </Button>
-      </div>
-    </nav>
-  )
+                {/* Mobile Menu */}
+                {isMobileMenuOpen && (
+                    <div className="md:hidden border-t border-gray-200 py-4 space-y-4">
+                        <a 
+                            href="#" 
+                            className="block text-gray-600 hover:text-gray-900 transition-colors py-2"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            Home
+                        </a>
+                        <a 
+                            href="#" 
+                            className="block text-gray-600 hover:text-gray-900 transition-colors py-2"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            Projects
+                        </a>
+                        <a 
+                            href="#" 
+                            className="block text-gray-600 hover:text-gray-900 transition-colors py-2"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            Contact
+                        </a>
+                        <Button className="w-full bg-primary text-white px-6 cursor-pointer mt-4">
+                            Let's Talk
+                        </Button>
+                    </div>
+                )}
+            </div>
+        </nav>
+    )
 }
 
