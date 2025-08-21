@@ -257,7 +257,7 @@ function TechCard({ icon, name, description, optimize = true }: { icon: React.Re
     <Tooltip>
       <TooltipTrigger asChild>
         <div className="group relative">
-          <Card className="border-2 border-black border-b-4 border-r-4 shadow-sm hover:shadow-lg transition-all duration-300 rounded-lg hover:scale-105 cursor-pointer aspect-square">
+          <Card className="border border-gray-400  shadow-sm hover:shadow-lg transition-all duration-300 rounded-lg hover:scale-105 cursor-pointer aspect-square">
             <CardContent className="p-3 h-full flex flex-col items-center justify-center">
               {renderIcon()}
               <div className="text-center">
