@@ -82,7 +82,7 @@ export function CursorFollower() {
     switch (cursorState) {
       case "linkedin":
         return { 
-          className: "w-12 h-12 bg-blue-50/20 backdrop-blur-sm flex items-center justify-center", 
+          className: "w-12 h-12 bg-green-50/20 backdrop-blur-sm flex items-center justify-center border border-green-400/40", 
           size: 48,
           showPlane: true 
         };
@@ -134,7 +134,7 @@ export function CursorFollower() {
       >
         {cursorStyle.showPlane && (
           <svg 
-            className="w-6 h-6 text-blue-500 transform rotate-45" 
+            className="w-6 h-6 text-green-500 transform rotate-45" 
             fill="currentColor" 
             viewBox="0 0 24 24"
           >

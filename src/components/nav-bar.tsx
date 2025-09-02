@@ -26,9 +26,9 @@ export default function Navbar() {
     // ${isScrolled ? "bg-red-700/40 border border-b-2 border-r-2 border-black backdrop-blur-sm   shadow-sm max-w-7xl" : "bg-transparent"}
     return (
         <nav
-            className={`fixed  left-1/2 -translate-x-1/2 top-4 z-50 container px-12 mx-auto transition-[max-width] duration-500 `}
+            className={`fixed  left-1/2 -translate-x-1/2 top-4 z-50 container px-12 mx-auto transition-[max-width] sm:container max-w-[70svw] duration-500 `}
         >
-            <div className={`" mx-auto transition-all duration-500 px-6 ${isScrolled ? "bg-white/90 border border-gray-300  *:backdrop-blur-sm   " : "bg-transparent"} rounded-lg `}>
+            <div className={`" mx-auto transition-all duration-500 px-6 ${isScrolled ? "bg-white/90 border border-gray-300  *:backdrop-blur-sm   " : "bg-transparent border border-background"} rounded-lg `}>
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex items-center space-x-2">
@@ -39,30 +39,31 @@ export default function Navbar() {
                             height={70}
                         /> */}
                         <span className="text-2xl font-bold text-black">IC</span>
-                    </div>
-
-                    {/* Desktop Navigation Links */}
-                    <div className="hidden md:flex items-center space-x-8">
-                        <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
-                            Home
-                        </a>
-                        <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">  
-                            Projects
-                        </a>
-                        <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors"> Contact</a>
-                        {/* <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
+                        <div className="hidden md:flex  space-x-8  ml-10">
+                            <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
+                                Home
+                            </a>
+                            <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
+                                Projects
+                            </a>
+                            <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors"> Contact</a>
+                            {/* <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
                             Events
                         </a>
                         <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
                             Contact us
                         </a> */}
-                        {/* <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
+                            {/* <a href="#" className="text-gray-600 hover:text-gray-900 transition-colors">
                             Blog
                         </a> */}
+                        </div>
+
                     </div>
 
+                    {/* Desktop Navigation Links */}
+
                     {/* Right Side */}
-                    <div className="flex items-center space-x-4">
+                    <div className=" ">
                         {/* GitHub Stars */}
                         {/* <Button  variant="outline" className=" px-6">Verify Vote</Button> */}
 
@@ -87,22 +88,22 @@ export default function Navbar() {
                 {/* Mobile Menu */}
                 {isMobileMenuOpen && (
                     <div className="md:hidden border-t border-gray-200 py-4 space-y-4">
-                        <a 
-                            href="#" 
+                        <a
+                            href="#"
                             className="block text-gray-600 hover:text-gray-900 transition-colors py-2"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
                             Home
                         </a>
-                        <a 
-                            href="#" 
+                        <a
+                            href="#"
                             className="block text-gray-600 hover:text-gray-900 transition-colors py-2"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
                             Projects
                         </a>
-                        <a 
-                            href="#" 
+                        <a
+                            href="#"
                             className="block text-gray-600 hover:text-gray-900 transition-colors py-2"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
