@@ -1,8 +1,20 @@
 # HX Portfolio v2
 
-This is a new implementation of my old portfolio using T3 stack and tRPC.
+This is a modern, feature-rich portfolio website built with the T3 stack and tRPC. It showcases my professional experience, technical skills, and projects through an interactive and responsive design.
 
-> **Note:** Ignore the server folder for the moment. We will use it later.
+## Development Philosophy
+
+**"Deliver now, optimize later"** - This project prioritizes rapid feature delivery and functionality over perfect code structure. The focus is on getting a working product with all essential features before diving into optimization and refactoring.
+
+> **Important:** A comprehensive refactor is planned as a TODO item after all core features are implemented and the application is fully functional.
+
+## What This Is
+
+- **Modern Portfolio**: A comprehensive showcase of professional experience and skills
+- **Interactive Design**: Features animations, hover effects, and dynamic content
+- **Responsive Layout**: Optimized for all device sizes from mobile to desktop
+- **Tech Demo**: Demonstrates proficiency with modern web technologies
+- **Project Showcase**: Highlights key projects with detailed descriptions and tech stacks
 
 ## Todo List
 
@@ -20,23 +32,32 @@ This is a new implementation of my old portfolio using T3 stack and tRPC.
 - [ ] SEO improvements
 - [ ] Responsive design for all devices
 - [ ] Animations and transitions
+- [ ] **Code refactoring and optimization** ⚠️
 
 ## Tech Stack
 
-- [Next.js](https://nextjs.org)
-- [tRPC](https://trpc.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Supabase](https://supabase.com)
-- [TypeScript](https://www.typescriptlang.org/)
+- [Next.js](https://nextjs.org) - React framework for production
+- [tRPC](https://trpc.io) - End-to-end typesafe APIs
+- [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS framework
+- [Supabase](https://supabase.com) - Backend as a service
+- [TypeScript](https://www.typescriptlang.org/) - Static type checking
+- [Framer Motion](https://www.framer.com/motion/) - Animation library
+- [GSAP](https://greensock.com/gsap/) - High-performance animations
 
 ## Development
 
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Run development server
-npm run dev
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Start production server
+pnpm start
 ```
 
 ## Learn More
