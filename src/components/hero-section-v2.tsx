@@ -214,7 +214,7 @@ export function HeroSectionV2() {
                                 </p>
 
                                 <p>
-                                    With 3+ years of experience, I specialize in full-stack development using Next.js,
+                                    With 1+ years of experience, I specialize in full-stack development using Next.js,
                                     React, TypeScript, and cloud technologies. I excel in DevOps practices, implementing
                                     CI/CD pipelines, containerization, and automated testing with TDD/BDD methodologies.
                                 </p>
