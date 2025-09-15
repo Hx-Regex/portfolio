@@ -4,6 +4,7 @@ import gsap from "gsap";
 import Link from "next/link";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 const socialLinks = [
     {
@@ -177,12 +178,16 @@ export function HeroSectionV2() {
                     <div className="w-full flex h-52 ">
                         <div className="sm:w-52 flex-shrink-0 sm:h-52 w-36 h-36 mt-auto border border-l-0 border-black/70 p-1">
                             <div className="w-full h-full rounded-full bg-purple-200 relative">
-                                <Image
-                                    src="/assets/pfp/images.jpg"
+                                {/* <Image
+                                    src=""
                                     alt="Ismail Chabane"
                                     fill
                                     className="object-fit rounded-full border border-black/70"
-                                />
+                                /> */}
+                                <Avatar className="w-full h-full">
+                                    <AvatarImage className="object-fit rounded-full border border-black/70" src="/assets/pfp/images.jpg" />
+                                    <AvatarFallback className="text-white text-2xl bg-black font-medium">IC</AvatarFallback>
+                                </Avatar>
                             </div>
 
 
@@ -204,23 +209,23 @@ export function HeroSectionV2() {
                             <h3 className="text-black/80 font-semibold mb-3 text-base sm:text-lg lg:text-xl">About</h3>
                             <div className="xl:text-sm text-xs text-black/90 leading-relaxed space-y-2 lg:space-y-3 font-medium">
                                 <p>
-                                    Hello! I am Ismail Chabane , a Software Engineer passionate about building 
+                                    Hello! I am Ismail Chabane , a Software Engineer passionate about building
                                     high-performance, scalable applications with modern technologies and best practices.
                                 </p>
-                                
+
                                 <p>
-                                    With 3+ years of experience, I specialize in full-stack development using Next.js, 
-                                    React, TypeScript, and cloud technologies. I excel in DevOps practices, implementing 
+                                    With 3+ years of experience, I specialize in full-stack development using Next.js,
+                                    React, TypeScript, and cloud technologies. I excel in DevOps practices, implementing
                                     CI/CD pipelines, containerization, and automated testing with TDD/BDD methodologies.
                                 </p>
-                                
+
                                 <p>
-                                    My recent projects include an AI-powered recommendation system at Sofimed using 
-                                    LangGraph and vector embeddings, a scalable voting platform for Kora Awards with 
-                                    microservices architecture, and a progressive web app for Africkana with offline 
+                                    My recent projects include an AI-powered recommendation system at Sofimed using
+                                    LangGraph and vector embeddings, a scalable voting platform for Kora Awards with
+                                    microservices architecture, and a progressive web app for Africkana with offline
                                     streaming capabilities.
                                 </p>
-{/*                                 
+                                {/*                                 
                                 <p>
                                     I'm passionate about turning complex technical challenges into elegant, user-friendly 
                                     solutions. Let's connect and collaborate!
@@ -235,12 +240,12 @@ export function HeroSectionV2() {
                                 <div className="text-center">
                                     <div className="w-4 h-4 sm:w-5 sm:h-5 lg:w-5 lg:h-5 text-black/60 mx-auto mb-1">
                                         <svg fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                                         </svg>
                                     </div>
                                     <div className="text-xs sm:text-sm lg:text-sm text-black/80 font-medium break-words">ismailchabane2@gmail.com</div>
                                 </div>
-                                
+
                                 {/* Location */}
                                 {/* <div className="text-center">
                                     <div className="w-4 h-4 sm:w-5 sm:h-5 lg:w-5 lg:h-5 text-black/60 mx-auto mb-1">
@@ -250,12 +255,12 @@ export function HeroSectionV2() {
                                     </div>
                                     <div className="text-xs sm:text-sm lg:text-sm text-black/80 font-medium">Morocco</div>
                                 </div> */}
-                                
+
                                 {/* Phone */}
                                 <div className="text-center">
                                     <div className="w-4 h-4 sm:w-5 sm:h-5 lg:w-5 lg:h-5 text-black/60 mx-auto mb-1">
                                         <svg fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
                                         </svg>
                                     </div>
                                     <div className="text-xs sm:text-sm lg:text-sm text-black/80 font-medium">+212 6 55 19 15 79</div>
@@ -279,11 +284,9 @@ export function HeroSectionV2() {
                                     href={social.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className={`flex-1 w-full p-1 hover:bg-white/5 transition-colors duration-200 ${
-                                        index > 0 ? 'border-t border-black/70' : ''
-                                    } ${
-                                        index < socialLinks.length - 1 ? 'border-b border-black/70' : ''
-                                    }`}
+                                    className={`flex-1 w-full p-1 hover:bg-white/5 transition-colors duration-200 ${index > 0 ? 'border-t border-black/70' : ''
+                                        } ${index < socialLinks.length - 1 ? 'border-b border-black/70' : ''
+                                        }`}
                                 >
                                     <div className="w-full h-full flex items-center px-1 py-2">
                                         <div className={`aspect-square h-full ${social.bgColor} rounded-md flex items-center justify-center flex-shrink-0`}>
