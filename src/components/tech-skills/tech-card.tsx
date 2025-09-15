@@ -31,51 +31,51 @@ export function TechCard({ skill }: TechCardProps) {
 
         if (skill.optimize !== false) {
           return (
-            <div className="h-8 flex items-center justify-center mb-2">
+            <div className="h-6 sm:h-6 md:h-8 flex items-center justify-center mb-2 sm:mb-2">
               <Image
                 src={src}
                 alt={`${skill.name} logo`}
                 width={32}
                 height={32}
-                className="h-8 w-auto object-contain"
+                className="h-6 sm:h-6 md:h-8 w-auto object-contain"
               />
             </div>
           );
         } else {
           // Use regular img tag when optimize is false
           return (
-            <div className="h-8 flex items-center justify-center mb-2">
+            <div className="h-6 sm:h-6 md:h-8 flex items-center justify-center mb-2 sm:mb-2">
               <img
                 src={src}
                 alt={`${skill.name} logo`}
-                className="h-8 w-auto object-contain"
+                className="h-6 sm:h-6 md:h-8 w-auto object-contain"
               />
             </div>
           );
         }
       }
       // If it's an SVG string, render it as HTML
-      return <div className="h-8 flex items-center justify-center mb-2" dangerouslySetInnerHTML={{ __html: skill.icon }} />;
+      return <div className="h-6 sm:h-6 md:h-8 flex items-center justify-center mb-2 sm:mb-2" dangerouslySetInnerHTML={{ __html: skill.icon }} />;
     }
     // If it's a React component, render it normally
-    return <div className="flex items-center justify-center mb-2">{skill.icon}</div>;
+    return <div className="flex items-center justify-center mb-2 sm:mb-2">{skill.icon}</div>;
   };
 
   return (
     <Tooltip>
       <TooltipTrigger asChild>
-        <div className="group relative">
-          <Card className="border border-gray-300 hover:shadow-lg transition-all duration-300 rounded-lg hover:scale-105 cursor-pointer aspect-square">
-            <CardContent className="p-3 h-full flex flex-col items-center justify-center">
+        <div className="group relative w-full">
+          <Card className="border aspect-square shadow-none border-black/70  hover:shadow-lg transition-all duration-300 rounded hover:scale-105 cursor-pointer w-full">
+            <CardContent className="p-1 sm:p-2 md:p-3 h-full flex flex-col items-center justify-center">
               {renderIcon()}
               <div className="text-center">
-                <h4 className="font-medium text-gray-900 text-xs">{skill.name}</h4>
+                <h4 className="font-medium text-black/70 text-[10px] sm:text-xs leading-tight">{skill.name}</h4>
               </div>
             </CardContent>
           </Card>
         </div>
       </TooltipTrigger>
-      <TooltipContent className="bg-white border border-gray-700 rounded-sm shadow-sm text-black">
+      <TooltipContent className="bg-white border border-black/70 rounded-sm shadow-sm text-black">
         <h2 className="text-md font-bold text-center">{skill.name}</h2>
         <p className="text-sm text-center">{skill.description}</p>
       </TooltipContent>

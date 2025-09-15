@@ -8,8 +8,8 @@ export const WORK_EXPERIENCE: ExperienceItemType[] = [
     positions: [
       {
         id: "ai-software-engineering-internship",
-        title: "AI Software Engineering - Internship",
-        employmentPeriod: "02.2025 — 08.2025",
+        title: "AI Software Engineering",
+        employmentPeriod: "02.2025 — 08.2025 (6 months)",
         employmentType: "Internship",
         icon: "code",
         description: `- Engineered AI recommendation system using LangGraph with custom prompt engineering and vector embeddings for pump selection optimization
@@ -37,8 +37,8 @@ export const WORK_EXPERIENCE: ExperienceItemType[] = [
     positions: [
       {
         id: "software-developer-freelance-kora",
-        title: "Software Developer - Freelance",
-        employmentPeriod: "09.2024 — 11.2024",
+        title: "Software Developer",
+        employmentPeriod: "09.2024 — 11.2024 (3 months)",
         employmentType: "Freelance",
         icon: "code",
         description: `- Built scalable online voting platform with microservices architecture, implementing secure payment processing through multiple gateways (Onafriq, Ngenius, Pvit) with webhook validation and transaction logging
@@ -66,8 +66,8 @@ export const WORK_EXPERIENCE: ExperienceItemType[] = [
     positions: [
       {
         id: "software-developer-freelance-africkana",
-        title: "Software Developer - Freelance",
-        employmentPeriod: "08.2023 — 10.2023",
+        title: "Software Developer",
+        employmentPeriod: "08.2023 — 10.2023 (3 months)",
         employmentType: "Freelance",
         icon: "code",
         description: `- Developed progressive web app (PWA) with service workers for offline streaming, implementing Web Audio API for audio playback and custom audio controls with waveform visualization

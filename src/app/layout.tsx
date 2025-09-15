@@ -8,10 +8,11 @@ import Footer from "@/components/footer";
 // import { NavBar } from "@/components/nav-bar";
 import { CursorFollower } from "@/components/cursorFollower/cursor-follower";
 import Navbar from "@/components/nav-bar";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
-  title: "Ismail Chabane | Software Developer & Data Science",
-  description: "Portfolio of Ismail Chabane, a software developer specializing in full-stack web development and pursuing a Master's in Data Science.",
+  title: "Ismail Chabane | Software Engineer",
+  description: "Portfolio of Ismail Chabane, a software engineer specializing in full-stack web development.",
   icons: [{ rel: "icon", url: "/assets/pfp/favicon.ico" }],
 };
 
@@ -29,9 +30,12 @@ export default function RootLayout({
         <TRPCReactProvider>
           <CursorFollower />
 
-            <Navbar />
+          <Navbar />
           {children}
-          {/* <Footer /> */}
+
+          <Footer />
+          <Analytics />
+
         </TRPCReactProvider>
       </body>
     </html>

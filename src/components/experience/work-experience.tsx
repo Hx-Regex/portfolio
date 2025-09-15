@@ -72,13 +72,13 @@ export function WorkExperience({
 }) {
   return (
     <div className={cn("bg-background ", className)}>
-      {experiences.map((experience) => (
+      {experiences.map((experience, index) => (
         <>
-          <div className="px-4">
+          <div className="px-4 ">
             <ExperienceItem key={experience.id} experience={experience} />
 
           </div>
-          <Separator className="bg-gray-300" />
+          {index < experiences.length - 1 && <Separator className="bg-black/70" />}
         </>
 
       ))}
@@ -109,7 +109,7 @@ export function ExperienceItem({
               unoptimized
             />
           ) : (
-            <span className="flex size-2 rounded-full bg-zinc-300 dark:bg-zinc-600" />
+            <span className="flex size-2 rounded-full bg-black/70" />
           )}
         </div>
 
@@ -148,7 +148,7 @@ export function ExperiencePositionItem({
         <CollapsibleTrigger className="group/experience not-prose block w-full text-left select-none">
           <div className="relative z-1 mb-1 flex items-center gap-3 bg-background">
             <div
-              className="flex size-6 shrink-0 items-center justify-center rounded-lg bg-white border border-gray-300 text-muted-foreground"
+              className="flex size-6 shrink-0 items-center justify-center rounded-lg bg-white border border-black/70 text-muted-foreground"
               aria-hidden
             >
               <ExperienceIcon className="size-4" />
@@ -229,7 +229,7 @@ function Skill({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-lg border border-black/80 bg-white/50 px-2 py-0.5 font-mono text-xs text-black/80 ",
+        "inline-flex items-center rounded-lg border border-black/70 bg-white/50 px-2 py-0.5 font-mono text-xs text-black/80 ",
         className
       )}
       {...props}

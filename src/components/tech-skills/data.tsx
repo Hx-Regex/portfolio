@@ -64,27 +64,27 @@ export const techCategories: TechCategory[] = [
     title: "DATABASE",
     skills: [
       {
-        icon: <SiPostgresql className="text-blue-700 h-6 w-6" />,
+        icon: <SiPostgresql className="text-blue-700 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "PostgreSQL",
         description: "Advanced relational database with JSON support"
       },
       {
-        icon: <SiMongodb className="text-green-700 h-6 w-6" />,
+        icon: <SiMongodb className="text-green-700 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "MongoDB",
         description: "Flexible NoSQL document database"
       },
       {
-        icon: <SiMysql className="text-blue-600 h-6 w-6" />,
+        icon: <SiMysql className="text-blue-600 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "MySQL",
         description: "Popular relational database"
       },
       {
-        icon: <SiRedis className="text-red-600 h-6 w-6" />,
+        icon: <SiRedis className="text-red-600 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Redis",
         description: "In-memory data structure store"
       },
       {
-        icon: <SiPrisma className="text-blue-800 h-6 w-6" />,
+        icon: <SiPrisma className="text-blue-800 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Prisma",
         description: "Next-generation ORM for Node.js"
       }
@@ -95,22 +95,22 @@ export const techCategories: TechCategory[] = [
     title: "BACKEND",
     skills: [
       {
-        icon: <SiNodedotjs className="text-green-600 h-6 w-6" />,
+        icon: <SiNodedotjs className="text-green-600 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Node.js",
         description: "JavaScript runtime built on Chrome's V8"
       },
       {
-        icon: <SiExpress className="text-gray-700 h-6 w-6" />,
+        icon: <SiExpress className="text-gray-700 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Express",
         description: "Fast, minimalist web framework"
       },
       {
-        icon: <SiFastapi className="text-green-500 h-6 w-6" />,
+        icon: <SiFastapi className="text-green-500 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "FastAPI",
         description: "Modern Python web framework"
       },
       {
-        icon: <SiTrpc className="text-blue-600 h-6 w-6" />,
+        icon: <SiTrpc className="text-blue-600 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "tRPC",
         description: "TypeScript-first API framework"
       }
@@ -121,32 +121,32 @@ export const techCategories: TechCategory[] = [
     title: "FRONTEND",
     skills: [
       {
-        icon: <SiReact className="text-cyan-500 h-6 w-6" />,
+        icon: <SiReact className="text-cyan-500 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "React",
         description: "Popular JavaScript library for UIs"
       },
       {
-        icon: <SiNextdotjs className="text-gray-900 h-6 w-6" />,
+        icon: <SiNextdotjs className="text-gray-900 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Next.js",
         description: "Production-ready React framework"
       },
       {
-        icon: <SiTypescript className="text-blue-600 h-6 w-6" />,
+        icon: <SiTypescript className="text-blue-600 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "TypeScript",
         description: "JavaScript with static type definitions"
       },
       {
-        icon: <SiTailwindcss className="text-cyan-500 h-6 w-6" />,
+        icon: <SiTailwindcss className="text-cyan-500 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Tailwind",
         description: "Utility-first CSS framework"
       },
       {
-        icon: <SiJavascript className="text-yellow-500 h-6 w-6" />,
+        icon: <SiJavascript className="text-yellow-500 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "JavaScript",
         description: "Dynamic programming language"
       },
       {
-        icon: <SiFramer className="text-purple-600 h-6 w-6" />,
+        icon: <SiFramer className="text-purple-600 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Framer",
         description: "Interactive design and prototyping"
       },
@@ -167,7 +167,7 @@ export const techCategories: TechCategory[] = [
     title: "TESTING",
     skills: [
       {
-        icon: <SiJest className="text-red-600 h-6 w-6" />,
+        icon: <SiJest className="text-red-600 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Jest",
         description: "JavaScript testing framework"
       }
@@ -178,22 +178,22 @@ export const techCategories: TechCategory[] = [
     title: "DEVOPS & CLOUD",
     skills: [
       {
-        icon: <SiDocker className="text-blue-600 h-6 w-6" />,
+        icon: <SiDocker className="text-blue-600 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Docker",
         description: "Containerization platform"
       },
       {
-        icon: <SiVercel className="text-black h-6 w-6" />,
+        icon: <SiVercel className="text-black h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Vercel",
         description: "Frontend deployment platform"
       },
       {
-        icon: <SiFirebase className="text-orange-500 h-6 w-6" />,
+        icon: <SiFirebase className="text-orange-500 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Firebase",
         description: "Google's app development platform"
       },
       {
-        icon: <SiGithub className="text-gray-900 h-6 w-6" />,
+        icon: <SiGithub className="text-gray-900 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "GitHub",
         description: "Git repository hosting service"
       },
@@ -203,12 +203,12 @@ export const techCategories: TechCategory[] = [
         description: "Open Source Deployment platform"
       },
       {
-        icon: <SiSupabase className="text-green-600 h-6 w-6" />,
+        icon: <SiSupabase className="text-green-600 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Supabase",
         description: "Open source Firebase alternative"
       },
       {
-        icon: <SiAppwrite className="text-pink-600 h-6 w-6" />,
+        icon: <SiAppwrite className="text-pink-600 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Appwrite",
         description: "Open source backend server"
       }
@@ -219,42 +219,42 @@ export const techCategories: TechCategory[] = [
     title: "TOOLS",
     skills: [
       {
-        icon: <SiFigma className="text-purple-500 h-6 w-6" />,
+        icon: <SiFigma className="text-purple-500 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Figma",
         description: "Collaborative design tool"
       },
       {
-        icon: <SiGit className="text-orange-600 h-6 w-6" />,
+        icon: <SiGit className="text-orange-600 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Git",
         description: "Distributed version control"
       },
       {
-        icon: <SiPostman className="text-orange-500 h-6 w-6" />,
+        icon: <SiPostman className="text-orange-500 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Postman",
         description: "API development environment"
       },
       {
-        icon: <SiEslint className="text-purple-600 h-6 w-6" />,
+        icon: <SiEslint className="text-purple-600 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "ESLint",
         description: "JavaScript linting utility"
       },
       {
-        icon: <SiPrettier className="text-pink-600 h-6 w-6" />,
+        icon: <SiPrettier className="text-pink-600 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Prettier",
         description: "Code formatter"
       },
       {
-        icon: <SiVite className="text-purple-600 h-6 w-6" />,
+        icon: <SiVite className="text-purple-600 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Vite",
         description: "Fast build tool"
       },
       {
-        icon: <SiStorybook className="text-pink-600 h-6 w-6" />,
+        icon: <SiStorybook className="text-pink-600 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Storybook",
         description: "Tool for building UI components"
       },
       {
-        icon: <SiNotion className="text-black h-6 w-6" />,
+        icon: <SiNotion className="text-black h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Notion",
         description: "All-in-one workspace"
       }
@@ -265,13 +265,13 @@ export const techCategories: TechCategory[] = [
     title: "INTEGRATIONS",
     skills: [
       {
-        icon: <SiStripe className="text-purple-700 h-6 w-6" />,
+        icon: <SiStripe className="text-purple-700 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "Stripe",
         description: "Online payment processing"
       },
       {
-        icon: <SiLemonsqueezy className="text-yellow-400 h-6 w-6" />,
-        name: "Lemonsqueezy",
+        icon: <SiLemonsqueezy className="text-yellow-400 h-4 w-4 sm:h-6 sm:w-6" />,
+        name: "Lemon squeezy",
         description: "Online payment processing"
       },
       {
@@ -292,17 +292,17 @@ export const techCategories: TechCategory[] = [
     title: "API",
     skills: [
       {
-        icon: <SiExpress className="text-gray-700 h-6 w-6" />,
+        icon: <SiExpress className="text-gray-700 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "REST",
         description: "Representational State Transfer API"
       },
       {
-        icon: <SiGraphql className="text-pink-600 h-6 w-6" />,
+        icon: <SiGraphql className="text-pink-600 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "GraphQL",
         description: "Query language for APIs"
       },
       {
-        icon: <SiWebrtc className="text-blue-600 h-6 w-6" />,
+        icon: <SiWebrtc className="text-blue-600 h-4 w-4 sm:h-6 sm:w-6" />,
         name: "WebSockets",
         description: "Real-time bidirectional communication"
       }

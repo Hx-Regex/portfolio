@@ -26,9 +26,9 @@ export default function Navbar() {
     // ${isScrolled ? "bg-red-700/40 border border-b-2 border-r-2 border-black backdrop-blur-sm   shadow-sm max-w-7xl" : "bg-transparent"}
     return (
         <nav
-            className={`fixed  left-1/2 -translate-x-1/2 top-4 z-50 container px-12 mx-auto transition-[max-width] sm:container max-w-[70svw] duration-500 `}
+            className={`fixed  left-1/2 -translate-x-1/2 top-4 z-50 container px-12 mx-auto transition-[max-width] sm:container sm:max-w-[70svw] max-w-[60svw] duration-500 `}
         >
-            <div className={`" mx-auto transition-all duration-500 px-6 ${isScrolled ? "bg-white/90 border border-gray-300  *:backdrop-blur-sm   " : "bg-transparent border border-background"} rounded-lg `}>
+            <div className={`" mx-auto transition-all duration-500 px-6 ${isScrolled ? " border border-black/40 bg-white/70   *:backdrop-blur-sm   " : "bg-transparent border border-background"} rounded-lg `}>
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex items-center space-x-2">
